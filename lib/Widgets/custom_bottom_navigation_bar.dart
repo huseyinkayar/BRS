@@ -1,11 +1,11 @@
-import 'package:brs/basic_screen.dart';
-import 'package:brs/get_appointment_screen.dart';
-import 'package:brs/profile_screen.dart';
+import 'package:brs/Screens/HomeScreen/basic_screen.dart';
+import 'package:brs/Screens/GetAppointmentScreen/get_appointment_screen.dart';
+import 'package:brs/Screens/ProfileScreen/profile_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 
-import 'bottom_app_bar_type.dart';
+import '../constants/bottom_app_bar_type.dart';
 
 class CustomBottomNavigationBar extends StatefulWidget implements PreferredSizeWidget {
   const CustomBottomNavigationBar({super.key, required this.from});

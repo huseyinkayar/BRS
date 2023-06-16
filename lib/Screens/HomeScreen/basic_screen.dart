@@ -1,8 +1,8 @@
-import 'package:brs/custom_bottom_navigation_bar.dart';
+import 'package:brs/Widgets/custom_bottom_navigation_bar.dart';
 import 'package:brs/main.dart';
 import 'package:flutter/material.dart';
 
-import 'bottom_app_bar_type.dart';
+import '../../constants/bottom_app_bar_type.dart';
 
 class BasicScreen extends StatelessWidget {
   const BasicScreen({super.key});

@@ -1,10 +1,10 @@
-import 'package:brs/bottom_app_bar_type.dart';
-import 'package:brs/custom_checkbox_list_tile.dart';
-import 'package:brs/make_appointment_screen_widget.dart';
+import 'package:brs/constants/bottom_app_bar_type.dart';
+import 'package:brs/Widgets/custom_checkbox_list_tile.dart';
+import 'package:brs/Widgets/get_appointment_screen_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'custom_bottom_navigation_bar.dart';
+import '../../Widgets/custom_bottom_navigation_bar.dart';
 
 class GetAppointmentScreen extends StatelessWidget {
   const GetAppointmentScreen({Key? key}) : super(key: key);

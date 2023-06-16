@@ -1,5 +1,5 @@
-import 'package:brs/basic_screen.dart';
-import 'package:brs/loginScreen.dart';
+import 'package:brs/Screens/HomeScreen/basic_screen.dart';
+import 'package:brs/Screens/LoginScreen/login_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

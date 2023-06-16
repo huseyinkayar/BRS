@@ -1,15 +1,13 @@
-import 'package:brs/basic_screen.dart';
-import 'package:brs/loginScreen.dart';
-import 'package:brs/register_screen.dart';
+import 'package:brs/Screens/HomeScreen/basic_screen.dart';
+import 'package:brs/Screens/RegisterScreen/register_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 
-import 'app_routes.dart';
 
-class RegisterScreen extends StatelessWidget {
-  const RegisterScreen({Key? key}) : super(key: key);
+class LoginScreen extends StatelessWidget {
+  const LoginScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,16 +18,14 @@ class RegisterScreen extends StatelessWidget {
 }
 
 class LoginHelper extends StatefulWidget {
-  const LoginHelper({Key? key}) : super(key: key);
+const LoginHelper({Key? key}) : super(key: key);
 
-  @override
-  State<LoginHelper> createState() => _LoginHelperState();
+@override
+State<LoginHelper> createState() => _LoginHelperState();
 }
 
 class _LoginHelperState extends State<LoginHelper> {
   TextEditingController userNameController = TextEditingController();
-  TextEditingController nameController = TextEditingController();
-  TextEditingController surnameController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
 
   @override
@@ -52,7 +48,7 @@ class _LoginHelperState extends State<LoginHelper> {
                 alignment: Alignment.center,
                 padding: const EdgeInsets.all(10),
                 child: const Text(
-                  'Sign In',
+                  'Welcome',
                   style: TextStyle(fontSize: 20),
                 )),
             Container(
@@ -62,26 +58,6 @@ class _LoginHelperState extends State<LoginHelper> {
                 decoration: const InputDecoration(
                   border: OutlineInputBorder(),
                   labelText: 'User Name',
-                ),
-              ),
-            ),
-            Container(
-              padding: const EdgeInsets.all(10),
-              child: TextField(
-                controller: nameController,
-                decoration: const InputDecoration(
-                  border: OutlineInputBorder(),
-                  labelText: 'Name',
-                ),
-              ),
-            ),
-            Container(
-              padding: const EdgeInsets.all(10),
-              child: TextField(
-                controller: surnameController,
-                decoration: const InputDecoration(
-                  border: OutlineInputBorder(),
-                  labelText: 'Surname',
                 ),
               ),
             ),
@@ -96,24 +72,35 @@ class _LoginHelperState extends State<LoginHelper> {
                 ),
               ),
             ),
-            const Padding(padding: EdgeInsets.all(10)),
+            Padding(padding: EdgeInsets.all(10)),
             Container(
                 height: 50,
                 padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
                 child: ElevatedButton(
-                  child: const Text('Sign In',style: TextStyle(
-                    fontSize: 20
-                  )),
+                  child: const Text('Login'),
                   onPressed: () {
-                    if(nameController.text != "" &&
-                        passwordController.text != "" &&
-                        surnameController.text != "" &&
+                    if(userNameController.text != "" &&
                         passwordController.text != "") {
-                      Get.offAll(() => const LoginScreen());
+                      Get.offAll(() => const BasicScreen());
                     }
 
                   },
                 )
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                const Text('Does not have account?'),
+                TextButton(
+                  child: const Text(
+                    'Sign in',
+                    style: TextStyle(fontSize: 20),
+                  ),
+                  onPressed: () {
+                    Get.offAll(() => const RegisterScreen());
+                  },
+                )
+              ],
             ),
           ],
         ));

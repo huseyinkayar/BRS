@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:intl/intl.dart';
 
-import 'basic_screen.dart';
+import '../Screens/HomeScreen/basic_screen.dart';
 
 
 class CustomCheckboxListTile extends StatefulWidget {
